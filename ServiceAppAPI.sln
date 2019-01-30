@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAppAPI", "ServiceAppAPI\ServiceAppAPI.csproj", "{08739FD6-9E05-49C3-BE0E-2898DCFCB55C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{981D1430-EBC5-4576-85CE-BD7ADB0EEACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{D157B4FB-B9F5-4F76-92E9-96D2F49D3770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{1676781D-52A0-4023-AD0A-F0FE49E383CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08739FD6-9E05-49C3-BE0E-2898DCFCB55C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08739FD6-9E05-49C3-BE0E-2898DCFCB55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08739FD6-9E05-49C3-BE0E-2898DCFCB55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08739FD6-9E05-49C3-BE0E-2898DCFCB55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981D1430-EBC5-4576-85CE-BD7ADB0EEACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981D1430-EBC5-4576-85CE-BD7ADB0EEACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981D1430-EBC5-4576-85CE-BD7ADB0EEACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981D1430-EBC5-4576-85CE-BD7ADB0EEACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D157B4FB-B9F5-4F76-92E9-96D2F49D3770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D157B4FB-B9F5-4F76-92E9-96D2F49D3770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D157B4FB-B9F5-4F76-92E9-96D2F49D3770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D157B4FB-B9F5-4F76-92E9-96D2F49D3770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1676781D-52A0-4023-AD0A-F0FE49E383CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1676781D-52A0-4023-AD0A-F0FE49E383CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1676781D-52A0-4023-AD0A-F0FE49E383CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1676781D-52A0-4023-AD0A-F0FE49E383CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		SolutionGuid = {E57A1A25-1219-46E5-8D8E-1A03F9A5D719}
+	EndGlobalSection
+EndGlobal
