@@ -1,1 +1,2 @@
 https://www.aspsnippets.com/Articles/Edit-Update-and-Delete-in-ASPNet-GridView-with-AutoGenerateColumns-True-using-C-and-VBNet.aspx
+Install-Package EnterpriseLibrary.Data -Version 6.0.1304
