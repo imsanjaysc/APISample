@@ -1,0 +1,73 @@
+Insert--------------------------------
+
+ALTER proc [dbo].[InsertCustomerInfo]
+@FirstName varchar(100),
+@LastName varchar(100),
+@MobileNo varchar(20),
+@Email nvarchar(200),
+@Password nvarchar(50),
+@ActiveStatus bit=1,
+@Source varchar(15)
+as 
+Begin
+	Begin try
+	Begin Transaction
+	if Not Exists(select MobileNo from tblcustomers where MobileNo=@MobileNo)
+	begin
+		insert into tblcustomers (FirstName, LastName, EmailID, MobileNo, Password, CreatedOn, UpdatedOn, ActiveStatus, Source)
+		values (@FirstName, isnull(@LastName,Null), isnull(@Email, Null), @MobileNo, @Password, GETDATE(), GETDATE(), @ActiveStatus, @Source)
+		
+		select SCOPE_IDENTITY() CustomerID
+
+	end
+	commit transaction
+	end try
+	begin catch
+		rollback transaction;
+	end catch
+End
+
+
+
+
+
+
+Update-------------------------------------
+
+ALTER proc [dbo].[UpdateCustomerInfo]
+@CustomerID int,
+@FirstName varchar(100),
+@LastName varchar(100),
+@EmailID nvarchar(250),
+@MobileNo varchar(12),
+@AltMobileNo varchar(20),
+@ActiveStatus bit=1
+as 
+Begin
+	Begin try
+	Begin Transaction
+	if Exists(select CustomerID from tblCustomers where CustomerID=@CustomerID)
+		begin
+		Declare @PreEmailID nvarchar(250)
+		Declare @EmailFlag bit
+		select @PreEmailID=EmailID from tblCustomers where CustomerID=@CustomerID
+		if (@PreEmailID <> @EmailID)
+		set @EmailFlag=0
+		else
+		set @EmailFlag=(select IsEmailVerified from tblCustomers where CustomerID=@CustomerID)
+
+		update tblCustomers set FirstName=@FirstName, LastName= @LastName, EmailID=@EmailID, MobileNo=@MobileNo, AlternateNumber=@AltMobileNo, UpdatedOn=GETDATE(), ActiveStatus=@ActiveStatus, IsEmailVerified=@EmailFlag
+		where CustomerID=@CustomerID
+		end
+	commit transaction
+	end try
+	begin catch
+		rollback transaction;
+	end catch
+End
+
+
+
+
+Delete----------------------------------------------------------------
+
