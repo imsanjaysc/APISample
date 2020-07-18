@@ -1,4 +1,6 @@
 https://www.aspsnippets.com/Articles/Edit-Update-and-Delete-in-ASPNet-GridView-with-AutoGenerateColumns-True-using-C-and-VBNet.aspx
-Install-Package EnterpriseLibrary.Data -Version 6.0.1304
+  Install-Package EnterpriseLibrary.Data -Version 6.0.1304
 mvc dropdown binndings--
-https://www.c-sharpcorner.com/article/different-ways-bind-the-value-to-razor-dropdownlist-in-aspnet-mvc5/
+  https://www.c-sharpcorner.com/article/different-ways-bind-the-value-to-razor-dropdownlist-in-aspnet-mvc5/
+Split and convert Comma Separated (Delimited) String to Table in SQL Server
+  https://www.aspsnippets.com/Articles/Split-and-convert-Comma-Separated-Delimited-String-to-Table-in-SQL-Server.aspx
