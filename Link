@@ -29,3 +29,17 @@ Split and convert Comma Separated (Delimited) String to Table in SQL Server
 To Disable Right Click in our page
 Put this code in html tag or in body tag
  oncontextmenu="return false;"
+
+/////////////OR///////////
+$(document).keydown(function(event){
+    if(event.keyCode==123){
+        return false;
+    }
+    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
+             return false;
+    }
+});
+
+$(document).on("contextmenu",function(e){        
+   e.preventDefault();
+});
