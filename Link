@@ -4,3 +4,28 @@ mvc dropdown binndings--
   https://www.c-sharpcorner.com/article/different-ways-bind-the-value-to-razor-dropdownlist-in-aspnet-mvc5/
 Split and convert Comma Separated (Delimited) String to Table in SQL Server
   https://www.aspsnippets.com/Articles/Split-and-convert-Comma-Separated-Delimited-String-to-Table-in-SQL-Server.aspx
+ 
+ To Disable F12 in our page
+ <script src="http://sibeeshpassion.com/content/scripts/jquery-1.11.1.min.js"></script> 
+ 		document.onkeypress = function (event) {  
+			event = (event || window.event);  
+			if (event.keyCode == 123 || event.keyCode == 122 || event.keyCode == 121) {  
+			return false;  
+			}  
+		}  
+		document.onmousedown = function (event) {  
+			event = (event || window.event);  
+			if (event.keyCode == 123 || event.keyCode == 122 || event.keyCode == 121) {  
+			return false;  
+			}  
+		}  
+		document.onkeydown = function (event) {  
+			event = (event || window.event);  
+			if (event.keyCode == 123 || event.keyCode == 122 || event.keyCode == 121) {  
+			return false;  
+			}  
+		}  
+
+To Disable Right Click in our page
+Put this code in html tag or in body tag
+ oncontextmenu="return false;"
