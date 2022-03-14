@@ -13,6 +13,7 @@ namespace DAL
         public readonly Database _dbReadOnly;
         public BaseClass()
         {
+
             var dbFactory = new DatabaseProviderFactory();
             _db = dbFactory.Create("defaultConnection");
             _dbReadOnly = dbFactory.Create("defaultConnection_read");
